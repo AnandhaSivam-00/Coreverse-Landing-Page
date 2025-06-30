@@ -14,107 +14,69 @@ import bgImage from '../assets/662fadf359d329ab7374cfea_banner1.png'
 
 import { serviceCardVariants } from '../utils/Animations'
 import { CheckVariantIcon } from '../assets/Icons/Icons'
-import { MonitorSmartphone, LayoutTemplate, Globe, Settings, Cuboid, Package } from 'lucide-react'
+import { MonitorSmartphone, LayoutTemplate, Globe, Package, DraftingCompass } from 'lucide-react'
 
 import clientReviewData from '../utils/clientReviewData.json'
 
 
 const services = [
   {
-    icon: <MonitorSmartphone className="text-blue-700 w-6 h-6" />,
-    title: 'App Development',
+    icon: <Globe className="text-blue-700 w-6 h-6" />,
+    title: 'Custom Website Development',
     description:
-      'Our App Development design service focuses on creating intuitive and engaging digital.',
+      'Beautiful, responsive, and high-performing websites crafted with precision. We build experiences that connect brands with users.',
+    list: ["Business Websites", "Portfolio Sites", "Landing Pages & Campaign Microsites", "E-commerce Frontends" ]
   },
   {
     icon: <LayoutTemplate className="text-blue-700 w-6 h-6" />,
-    title: 'Content Marketing',
+    title: 'Web Application Engineering',
     description:
-      'Our Content Marketing design service focuses on creating intuitive and engaging digital.',
+      'Scalable, secure, and intelligent web applications that handle business logic, data, and dynamic user interaction with elegance.',
+    list: ["Business Dashboards", "Internal Portals", "Customer Interfaces", "Content & Workflow Management Systems"]
   },
   {
-    icon: <Globe className="text-blue-700 w-6 h-6" />,
-    title: 'Pay-Per-Click (PPC)',
+    icon: <MonitorSmartphone className="text-blue-700 w-6 h-6" />,
+    title: 'Mobile App Development',
     description:
-      'Our Marketing Automation design service focuses on creating intuitive and engaging digital.',
-  },
-  {
-    icon: <Settings className="text-blue-700 w-6 h-6" />,
-    title: 'Marketing Automation',
-    description:
-      'Our Marketing Automation design service focuses on creating intuitive and engaging digital.',
-  },
-  {
-    icon: <Cuboid className="text-blue-700 w-6 h-6" />,
-    title: 'Brand Identity',
-    description:
-      'Our Marketing Automation design service focuses on creating intuitive and engaging digital.',
+      'Smart, seamless mobile apps that work across iOS and Android, built with modern frameworks and a mobile-first mindset.',
+    list: ["Cross-platform & Native Apps", "User-centric Mobile Experiences", "App Store Optimization & Deployment", "Backend Integration & API Support"]
   },
   {
     icon: <Package className="text-blue-700 w-6 h-6" />,
-    title: 'Web Development',
+    title: 'SaaS Product Development',
     description:
-      'Our Marketing Automation design service focuses on creating intuitive and engaging digital.',
+      'Turn your idea into a product. We design, develop, and deploy robust Software-as-a-Service platforms for modern businesses.',
+    list: ["End-to-End Product Engineering", "Subscription Models", "Role-Based Access & Admin Panels", "Analytics, Automation & Integrations"]
+  },
+  {
+    icon: <DraftingCompass className="text-blue-700 w-6 h-6" />,
+    title: 'UI/UX Strategy & Design',
+    description:
+      "We don't just design interfaces; we design interactions. Our user experience team ensures every touchpoint is intuitive and engaging.",
+    list: ["UI Wireframing & Prototyping", "Design Systems & Component Libraries"," Human-Centered Design Principles", "Mobile, Web, and SaaS Focused"]
   },
 ]
 const highlights = [
-  'Comprehensive Service Overview.',
-  'Intuitive Contact and Inquiry Forms.',
-  'Data-Driven Performance Metrics.',
-  'Interactive Service Pricing Options.',
+  'Requirement Workshops',
+  'Weekly Progress Reviews',
+  'Proactive Support & Optimization',
+  'Post-Launch Training and Documentation',
 ]
 
 
 const Service = () => {
   return (
     <div className="text-white px-4 md:px-6">
-      <SpotlightContainer>
-        <Spotlight3DCardEffect>
-          {/* Spotlight Section */}
-          <div>
-            {/* Background Effects */}
-            <div className="absolute inset-0 z-0">
-              <div className="w-full h-full bg-gradient-radial from-purple-800 via-transparent to-black opacity-40" />
-              <div
-                className="absolute inset-0 bg-no-repeat bg-right bg-contain opacity-30 blur-3xl"
-                style={{ backgroundImage: `url(${bgImage})` }}
-              />
-            </div>
-
-            {/* Spotlight Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20 flex flex-col md:flex-row items-center justify-between">
-              {/* Text Content */}
-              <div className="max-w-2xl text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-                <p className="text-lg text-gray-300">
-                  Every business has a story, and we’re here to tell yours through compelling digital solutions.
-                </p>
-              </div>
-
-              {/* Character Image */}
-              <div className="mt-10 md:mt-0 md:ml-12">
-                <img
-                  src={image}
-                  alt="Character"
-                  className="w-64 md:w-90 mx-auto"
-                />
-              </div>
-
-
-            </div>
-
-          </div>
-        </Spotlight3DCardEffect>
-      </SpotlightContainer>
-
-      {/* Services List Section */}
+      <div className="text-center pb-20">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">What We Do</h1>
+        <p className="text-lg text-gray-300">
+          Crafting Digital Realities, Enabling Smart Possibilities. We are your technology ally, committed to making your ideas real, scalable, and ready for the world.
+        </p>
+      </div>
 
       <div className="mt-20">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
-          We Provide Best Service for{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-900">
-            Your Brand.
-          </span>
+          We Provide The Best Services to Empower Your Business.
         </h2>
 
         <div className="max-w-6xl mx-auto space-y-6 mt-10 ">
@@ -127,18 +89,22 @@ const Service = () => {
               whileInView='whileInView'
               viewport='viewport'
             >
-              {/* Left: Icon + Title */}
               <div className="flex items-center content-center space-x-4 h-15">
                 <div className="w-10 h-12 p-2 rounded-full border border-white/10 flex items-center justify-center">
                   {service.icon}
                 </div>
                 <h3 className="text-xl mb-0 font-semibold w-full md:w-50 lg:w-50">{service.title}</h3>
               </div>
-
-              {/* Right: Description */}
-              <p className="text-gray-300 text-base md:text-lg md:max-w-3xl leading-relaxed md:text-left md:pl-20">
-                {service.description}
-              </p>
+              <div className='flex flex-col justify-center content-center space-x-4'>
+                <p className="text-gray-300 text-base md:text-lg md:max-w-3xl leading-relaxed md:text-left">
+                  {service.description}
+                </p>
+                <ul className='text-gray-300 text-sm md:max-w-3xl leading-relaxed list-styles'>
+                  {service.list.map((item, index) => (
+                    <li key={index} className='text-gray-300'>{item}</li>
+                  ))}
+                </ul>
+              </div>
 
             </motion.div>
           ))}
@@ -153,21 +119,19 @@ const Service = () => {
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
               {/* Left Side */}
               <div className="max-w-xl text-center md:text-left -mt-2">
-                <SectionPill sectionTitle={'Why Choose Us?'} />
+                <SectionPill sectionTitle={'Our Approach'} />
                 <h2 className="text-4xl sm:text-5xl font-bold mb-6 leading-tight pt-3">
-                  Crafting Impactful <br />
-                  Solutions{' '}
+                  A Client-Centric {' '}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-900">
-                    Tailored to You.
+                    Partnership.
                   </span>
                 </h2>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Stay informed with our marketing insights blog, connect instantly
-                  through live chat, and subscribe to our newsletter for regular updates. With mobile-first design, intuitive contact forms, and social proof.
+                  We treat every project as a strategic partnership. Our transparent communication, frequent demos, and collaborative process ensure you're always in control of the outcome.
                 </p>
                 <PrimaryButtonAnimation
                   linkText='Get Started'
-                  link={'/sign-up'}
+                  link={'/contact'}
                   animationStyle={'rounded-full! mouse-exit-origin'}
                 />
               </div>
@@ -189,8 +153,6 @@ const Service = () => {
                 ))}
               </div>
             </div>
-
-            {/* Years of Experience (Floating Bottom Left) */}
           </Spotlight3DCardEffect>
         </SpotlightContainer>
       </div>
@@ -211,7 +173,7 @@ const Service = () => {
                     key={review.id}
                     className='max-w-sm'
                   >
-                    <ReviewCards 
+                    <ReviewCards
                       id={review.id}
                       reviewer={review.client_name}
                       position={review.position}
@@ -225,7 +187,6 @@ const Service = () => {
           </div>
         </div>
       </div>
-
     </div>
 
   )

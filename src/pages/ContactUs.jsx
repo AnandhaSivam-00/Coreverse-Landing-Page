@@ -21,7 +21,7 @@ const ContactUs = () => {
           viewport='viewport'
           className='text-2xl md:text-3xl lg:text-4xl'
         >
-          Contact our support team for assistance
+          Let's Build the Future, Together
         </motion.h1>
         <motion.p 
           className='max-w-xl mx-auto text-sm md:text-base mt-3'
@@ -30,7 +30,7 @@ const ContactUs = () => {
           whileInView='whileInView'
           viewport='viewport'
         >
-          Nibh risus neque malesuada scelerisque scelerisque semper aliquet quis pellentesque. Amet leo id imperdiet pulvinar vel.
+          We're not just a service provider. We're your technology ally - committed to making your ideas real, scalable, and ready for the world. Reach out to us.
         </motion.p>
       </div>
       <SpotlightContainer className='w-full max-w-3xl mx-auto px-1 md:px-3 lg:px-4'>

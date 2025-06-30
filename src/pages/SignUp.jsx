@@ -34,21 +34,21 @@ const SignUp = () => {
   };
 
   return (
-    <section className='w-screen h-screen grid grid-cols-3 gap-x-10 overflow-x-hidden'>
-      <div className='p-2'>
+    <section className='w-screen min-h-screen lg:h-screen lg:grid lg:grid-cols-3 gap-x-10 overflow-x-hidden'>
+      <div className='hidden lg:block p-2'>
         <img 
           src={SignBanner}
           alt='Sign Up Banner'
           className='w-full h-full object-cover rounded-lg signup-img-banner'
         />
       </div>
-      <div className='col-span-2 flex flex-col justify-center items-center mx-auto'>
+      <div className='lg:col-span-2 flex flex-col justify-center items-center mx-auto px-4 py-8 lg:py-0 w-full'>
         <SpotlightContainer className="w-full max-w-lg">
-            <Spotlight3DCardEffect className="rounded-2xl p-12 flex flex-col justify-center items-center">
+            <Spotlight3DCardEffect className="rounded-2xl p-6 sm:p-8 lg:p-12 flex flex-col justify-center items-center">
               <SectionPill sectionTitle='Sign up' />
 
               <motion.h2 
-                className="text-center"
+                className="text-center text-2xl sm:text-3xl lg:text-4xl"
                 variants={headingVariants}
                 initial="initial"
                 whileInView="whileInView"
@@ -58,7 +58,7 @@ const SignUp = () => {
               </motion.h2>
 
               <motion.p 
-                className="text-center text-wrap"
+                className="text-center text-wrap text-sm sm:text-base px-2"
                 variants={paragraphVariants}
                 initial="initial"
                 whileInView="whileInView"
@@ -67,7 +67,7 @@ const SignUp = () => {
                 Only pay for what you use, period. Start your 14-day free trial today
               </motion.p>
 
-              <form onSubmit={handleSubmit} className="w-full flex flex-col gap-6">
+              <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4 sm:gap-6">
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="name" className="text-xs text-gray-400 uppercase tracking-wider font-medium">
                     Name
@@ -79,7 +79,7 @@ const SignUp = () => {
                     placeholder="Your Name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#0a1018] border border-gray-800 rounded-lg text-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                    className="w-full p-3 sm:p-3.5 bg-[#0a1018] border border-gray-800 rounded-lg text-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600 text-sm sm:text-base"
                     required
                   />
                 </div>
@@ -95,7 +95,7 @@ const SignUp = () => {
                     placeholder="Your Email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#0a1018] border border-gray-800 rounded-lg text-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                    className="w-full p-3 sm:p-3.5 bg-[#0a1018] border border-gray-800 rounded-lg text-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600 text-sm sm:text-base"
                     required
                   />
                 </div>
@@ -111,20 +111,20 @@ const SignUp = () => {
                     placeholder="Password"
                     value={formData.password}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#0a1018] border border-gray-800 rounded-lg text-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                    className="w-full p-3 sm:p-3.5 bg-[#0a1018] border border-gray-800 rounded-lg text-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-600 text-sm sm:text-base"
                     required
                   />
                 </div>
 
                 <button 
                   type="submit"
-                  className="w-full py-3.5 px-4 mt-4 font-medium text-white rounded-lg! mouse-exit-origin"
+                  className="w-full py-3.5 px-4 mt-2 sm:mt-4 font-medium text-white rounded-lg! mouse-exit-origin text-sm sm:text-base"
                 >
                   Submit
                 </button>
               </form>
 
-              <div className="mt-8 text-center text-sm text-gray-500">
+              <div className="mt-6 sm:mt-8 text-center text-xs sm:text-sm text-gray-500">
                 Already have an account?{" "}
                 <Link to="/login" className="font-medium">
                   Login

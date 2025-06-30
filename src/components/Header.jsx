@@ -74,6 +74,10 @@ const Header = () => {
         isActive
             ? 'text-white! font-medium text-decoration-none py-2 px-4 mx-auto rounded-full block md:hidden'
             : 'text-slate-500! font-medium py-2 px-3 rounded-full text-decoration-none block md:hidden';
+
+    const handleShowMenu = () => {
+        setShowMenu(prev => !prev);
+    }
             
     return (
         <>
@@ -173,7 +177,7 @@ const Header = () => {
                     <motion.button
                         className={`py-1 px-2 rounded-full! block hover:bg-slate-900 md:hidden 
                             ${showMenu ? 'menu-btn-animation menu-btn-opened' : 'menu-btn-animation'}`}
-                        onClick={() => setShowMenu((prev) => !prev)}
+                        onClick={handleShowMenu}
                         whileTap={{ scale: 0.9 }}
                     >
                         <MenuIcon width={30} height={30} />
@@ -208,6 +212,7 @@ const Header = () => {
                                 <NavLink
                                     to={link}
                                     className={navLinkClassMobile}
+                                    onClick={handleShowMenu}
                                     end
                                 >
                                     {link.split('-').map(word => 

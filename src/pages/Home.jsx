@@ -1,8 +1,6 @@
-import React from 'react'
+
 import { motion } from 'framer-motion'
 
-import MainText from '../components/MainText'
-import Sphere3D from '../components/Sphere3D'
 import ClientMarquee from '../components/ClientMarquee'
 import PrimaryButtonAnimation from '../components/PrimaryButtonAnimation'
 import SectionPill from '../components/SectionPill'
@@ -22,15 +20,17 @@ import {
   ExpressJsIcon,
   PostgreSQLIcon,
   AntDesignIcon,
-  TestimonialUserIcon
+  NextJSIcon,
+  AWSIcon,
+  GoogleCloudIcon,
+  StripeIcon,
+  GitHubActionIcon,
 } from '../assets/Icons/Icons'
 
 
 import {
   headingVariants,
   paragraphVariants,
-  buttonVariants,
-  testimonialCardVariants
 } from '../utils/Animations'
 import clientReviewData from '../utils/ClientReviewData'
 
@@ -49,7 +49,7 @@ import ReviewCards from '../components/ReviewCards'
 const Home = () => {
   return (
     <div className='mx-auto flex flex-col gap-y-15 md:gap-y-25 lg:gap-y-25'>
-      <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-5 gap-y-30'>
+      <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-1 gap-y-30'>
         <div className='m-auto p-auto flex flex-col justify-start items-start gap-y-3 z-50!'>
           <motion.h1
             className='pb-2'
@@ -58,7 +58,7 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Own the internet. Start with fast web hosting.
+            Crafting Digital Realities, Enabling Smart Possibilities
           </motion.h1>
           <motion.p
             variants={paragraphVariants}
@@ -66,7 +66,7 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Up to 90% OFF Web Hosting Plans + Free SSL.
+            At Coreverse Technologies, we are the architects of digital transformation. From web solutions to full-fledged SaaS platforms, our strength lies in simplicity-driven innovation.
           </motion.p>
           <PrimaryButtonAnimation
             linkText='Get Started'
@@ -88,21 +88,21 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Trusted by content creators across the world
+            Trusted by Digital Startups, EdTech, Media & Commerce businesses worldwide
           </motion.p>
           <ClientMarquee />
         </div>
       </section>
       <section className='grid grid-cols-1 gap-x-5 gap-y-10'>
         <div className='flex flex-col justify-center items-center gap-y-2 max-w-xl mx-auto text-center text-wrap'>
-          <SectionPill sectionTitle={'Features'} />
+          <SectionPill sectionTitle={'Services'} />
           <motion.h2
             variants={headingVariants}
             initial='initial'
             whileInView='whileInView'
             viewport='viewport'
           >
-            Craft Your Believable Future With Coreverse
+            What We Do - Our Core Services
           </motion.h2>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-5 gap-y-5'>
@@ -111,16 +111,16 @@ const Home = () => {
             <Spotlight3DCardEffect className='p-0 rounded-xl fl</Spotlight3DCardEffect>ex flex-col justify-between items-start gap-y-1'>
               <img src={BannerImage1} alt='banner-1' loading='lazy' className='w-1/2 md:w-full lg:w-full mx-auto'/>
               <div className='flex flex-col justify-start items-start gap-y-2 px-4 pb-2'>
-                <h4 className='max-w-50'>Smart Contract Automation</h4>
-                <p className='max-w-90'>Nibh ante pellentesque eget. Nunc lectus amet sem purus accumsan. Amet sed pulvinar nibh et eget. Sed egestas ultrices et fringilla.</p>
+                <h4 className='max-w-50'>Custom Website Development</h4>
+                <p className='max-w-90'>Beautiful, responsive, and high-performing websites crafted with precision. Whether you're a startup or enterprise, we build experiences that connect brands with users.</p>
               </div>
             </Spotlight3DCardEffect>
           </SpotlightContainer>
           <SpotlightContainer>
             <Spotlight3DCardEffect className='p-0 rounded-xl flex flex-col justify-between items-start gap-y-1'>
               <div className='flex flex-col justify-start items-start gap-y-2 px-4 pt-4 pb-0'>
-                <h4 className='max-w-50'>Smart Contract Automation</h4>
-                <p className='max-w-90 mb-0'>Ullamcorper mauris quis a urna tortor fermentum. Orci rhoncus sollicitudin sit diam mauris. Nulla laoreet sed at mattis rhoncus.</p>
+                <h4 className='max-w-50'>Web Application Engineering</h4>
+                <p className='max-w-90 mb-0'>Scalable, secure, and intelligent web applications that handle business logic, data, and dynamic user interaction with elegance.</p>
               </div>
               <img src={BannerImage2} alt='banner-2' loading='lazy' className='w-1/2 md:w-full lg:w-full mx-auto'/>
             </Spotlight3DCardEffect>
@@ -131,16 +131,16 @@ const Home = () => {
             <Spotlight3DCardEffect className='h-100 p-0 rounded-xl flex flex-col justify-between items-start gap-y-1'>
               <img src={BannerImage3} alt='banner-3' loading='lazy' className='w-1/2 md:w-full lg:w-full mx-auto'/>
               <div className='flex flex-col justify-start items-start gap-y-2 px-4 pb-2'>
-                <h4 className='max-w-50'>Instant Transactions</h4>
-                <p className='max-w-90'>Egestas ridiculus scelerisque parturient tellus ultrices a nisi est facilisi. Sed suspendisse id enim sagittis.</p>
+                <h4 className='max-w-50'>Mobile App Development</h4>
+                <p className='max-w-90'>Smart, seamless mobile apps that work across iOS and Android, built with modern frameworks and a mobile-first mindset.</p>
               </div>
             </Spotlight3DCardEffect>
           </SpotlightContainer>
           <SpotlightContainer>
             <Spotlight3DCardEffect className='p-0 h-100 rounded-xl flex flex-col justify-between items-start gap-y-1'>
               <div className='flex flex-col justify-start items-start gap-y-2 px-4 pt-4 pb-0'>
-                <h4 className='max-w-50'>Privacy-First</h4>
-                <p className='max-w-90 mb-0'>Sed massa consequat eros vel. Urna sed tellus nibh maecenas ac rhoncus nisi at lorem. Egestas elit eget.</p>
+                <h4 className='max-w-50'>SaaS Product Development</h4>
+                <p className='max-w-90 mb-0'>Turn your idea into a product. We design, develop, and deploy robust Software-as-a-Service platforms for modern businesses.</p>
               </div>
               <img src={BannerImage4} alt='banner-4' loading='lazy' className='w-1/2 md:w-full lg:w-full mx-auto'/>
             </Spotlight3DCardEffect>
@@ -149,8 +149,8 @@ const Home = () => {
             <Spotlight3DCardEffect className='p-0 h-100 rounded-xl flex flex-col justify-between items-start gap-y-1'>
               <img src={BannerImage5} alt='banner-5' loading='lazy' className='w-1/2 md:w-full lg:w-full mx-auto'/>
               <div className='flex flex-col justify-start items-start gap-y-2 px-4 pb-2'>
-                <h4 className='max-w-50'>Decentralized</h4>
-                <p className='max-w-90'>Imperdiet a consequat sodales eget non semper amet sagittis. Vitae vulputate nisi ornare sed nisl. Mi leo egestas.</p>
+                <h4 className='max-w-50'>UI/UX Strategy & Design</h4>
+                <p className='max-w-90'>We don't just design interfaces; we design interactions. Our UX team ensures every touchpoint is intuitive and engaging.</p>
               </div>
             </Spotlight3DCardEffect>
           </SpotlightContainer>
@@ -165,20 +165,21 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Experience the future of Web Tech today
+            Precision. Purpose. Performance.
           </motion.h2>
-          <motion.h2
+          <motion.h3
             className='opacity-50 max-w-5xl'
             variants={headingVariants}
             initial='initial'
             whileInView='whileInView'
             viewport='viewport'
           >
-            Explore our comprehensive suite of secure, transparent, and efficient web tech solutions
-          </motion.h2>
+            We believe every digital product must be rooted in purpose and executed with technical clarity. 
+            From the first wireframe to the final deployment, every step is about delivering functional elegance.
+          </motion.h3>
           <PrimaryButtonAnimation
             linkText='Learn More'
-            link={'/sign-up'}
+            link={'/about-us'}
             animationStyle={'rounded-full! mouse-exit-origin'}
           />
         </div>
@@ -196,13 +197,17 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Build using latest tech stacks
+            Our Development Stack & Practices
           </motion.h2>
         </div>
         {[
           { 
             icon: <ReactIcon width={45} height={45} />, 
             text: 'React' 
+          },
+          { 
+            icon: <NextJSIcon width={45} height={45} />, 
+            text: 'NextJS' 
           },
           { 
             icon: <FlutterIcon width={45} height={45} />, 
@@ -229,8 +234,20 @@ const Home = () => {
             text: 'Postgre SQL' 
           },
           { 
-            icon: <AntDesignIcon width={45} height={45} />, 
-            text: 'Ant Design' 
+            icon: <AWSIcon width={45} height={45} />, 
+            text: 'AWS' 
+          },
+          { 
+            icon: <GoogleCloudIcon width={45} height={45} />, 
+            text: 'Google Cloud' 
+          },
+          { 
+            icon: <StripeIcon width={45} height={45} />, 
+            text: 'Stripe Integration' 
+          },
+          { 
+            icon: <GitHubActionIcon width={45} height={45} />, 
+            text: 'GitHub Actions' 
           },
         ].map((item, idx) => (
           <motion.div
@@ -265,7 +282,7 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Seamless optimization for efficiency & performance
+            Flexible Collaboration Models
           </motion.h2>
           <motion.p
             className='max-w-140'
@@ -274,13 +291,12 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Get more speed, better SEO, visitor retention and conversions with our
-            custom-built WP optimization stack and LiteSpeed cache. A wide variety of tools to satisfy advanced
-            user and website developer needs.
+            Whether you need a one-time project or a long-term tech partner, we offer flexible collaboration models: 
+            Fixed-Cost Projects, Dedicated Developer Teams, Agile Sprint-Based Delivery, and Product-as-a-Service (PaaS) Partnerships.
           </motion.p>
           <PrimaryButtonAnimation
             linkText='Learn More'
-            link={'/sign-up'}
+            link={'/services'}
             animationStyle={'rounded-full! mouse-exit-origin'}
           />
         </div>
@@ -347,7 +363,7 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Support Initiates Here
+            Your Technology Partner
           </motion.h2>
           <motion.p
             variants={paragraphVariants}
@@ -355,7 +371,7 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Reimagine your future with our innovative solutions tailored to your needs. Let us help you unlock new possibilities and achieve your goals with confidence
+            We treat every project as a strategic partnership — not a one-off contract. Our transparent communication, frequent demos, and collaborative process ensure you're always in control of the outcome.
           </motion.p>
         </div>
       </section>
@@ -368,43 +384,43 @@ const Home = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Get answers to common questions
+            Frequently Asked Questions
           </motion.h2>
         </div>
         <CollapsableCard
-          heading={'What is Nexus and how does it work?'}
-          text={'Rutrum placerat condimentum eget diam erat et. Risus tellus euismod diam tristique pellentesque. Nec sodales nulla luctus eu ornare aliquam enim mauris. Ut velit malesuada.'}
+          heading={'What services does Coreverse Technologies offer?'}
+          text={'We offer Custom Website Development, Web Application Engineering, Mobile App Development, SaaS Product Development, and UI/UX Strategy & Design. Our comprehensive services cover everything from business websites to full-scale SaaS platforms.'}
         />
         <CollapsableCard
-          heading={'What makes your products unique?'}
-          text={'Tincidunt ultrices eu feugiat a egestas commodo vitae mauris. Commodo imperdiet iaculis in dictum volutpat. Enim diam nam ligula integer urna. Magna vitae orci malesuada volutpat. At gravida id libero vitae mattis libero arcu quis. Viverra enim.'}
+          heading={'What technologies do you work with?'}
+          text={'Our tech stack includes React, Vue, Node.js, Django, Flask, Firebase, PostgreSQL, MongoDB, Docker, and cloud platforms like AWS and Google Cloud. We always use the latest technologies for flexibility, speed, and long-term maintainability.'}
         />
         <CollapsableCard
-          heading={'How can I implement blockchain in my industry?'}
-          text={'Aliquet id vestibulum metus amet hac cras volutpat id. Aliquam ut nec est sit vel in. Magna aliquam diam eu in. Ornare consequat vel tempus fusce nec egestas nunc.'}
+          heading={'What engagement models do you offer?'}
+          text={'We offer flexible collaboration models including Fixed-Cost Projects, Dedicated Developer Teams, Agile Sprint-Based Delivery, and Product-as-a-Service (PaaS) Partnerships to suit different project needs and budgets.'}
         />
         <CollapsableCard
-          heading={'Is blockchain technology secure?'}
-          text={'Elit pellentesque tellus auctor maecenas. Fermentum nascetur pellentesque non vitae vestibulum gravida tellus lectus venenatis. Cum parturient tempor porta eleifend nibh. Faucibus nulla mauris ac urna. Faucibus augue pharetra tellus felis. Gravida quis massa.'}
+          heading={'What industries do you work with?'}
+          text={'We work with Digital Startups, Education & EdTech, Media & Content Platforms, Retail & D2C Commerce, Service-based Enterprises, and Communities & Non-Profits across various sectors.'}
         />
         <CollapsableCard
-          heading={'How can blockchain benefit my business?'}
-          text={'Iaculis convallis purus enim dapibus odio nibh. Massa est gravida risus suspendisse tellus magna. Arcu donec vitae tincidunt ullamcorper nec tempor tortor eget morbi.'}
+          heading={'How do you ensure project success?'}
+          text={'We follow a client-centric approach with transparent communication, frequent demos, requirement workshops, weekly progress reviews, and collaborative processes to ensure you\'re always in control of the outcome.'}
         />
         <CollapsableCard
-          heading={'What is blockchain technology?'}
-          text={'Eu cursus tempor et suscipit tincidunt ultrices. Aenean urna odio dolor at sed integer ipsum fermentum quis. Eu venenatis ut et bibendum. Orci dapibus mattis.'}
+          heading={'Do you provide post-launch support?'}
+          text={'Yes, we provide proactive support & optimization, post-launch training, and comprehensive documentation to ensure your digital solution continues to perform optimally after deployment.'}
         />
       </section>
       <section className='w-full h-full'>
         <SpotlightContainer>
           <Spotlight3DCardEffect className='p-5 rounded-xl'>
             <div className='flex flex-col justify-center items-center gap-y-3 max-w-2xl mx-auto text-center text-wrap'>
-              <SectionPill sectionTitle={'Sign Up'} />
-              <h2>Join Our Dev Tech Community Today!</h2>
-              <p>Sapien eros purus a quis euismod elit. Ornare vitae nunc quis nunc curabitur.</p>
+              <SectionPill sectionTitle={'Get Started'} />
+              <h2>Let's Build the Future, Together</h2>
+              <p>We're not just a service provider. We're your technology ally — committed to making your ideas real, scalable, and ready for the world.</p>
               <PrimaryButtonAnimation
-                linkText='Get Started'
+                linkText='Contact Us'
                 link={'/sign-up'}
                 animationStyle={'rounded-full! mouse-exit-origin'}
               />

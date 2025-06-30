@@ -22,7 +22,7 @@ const Spotlight3DCardEffect = ({ children, event, className='rounded-lg p-3' }) 
   return (
     <motion.div 
       className={`relative box-border flex flex-col overflow-hidden ${className} hover:cursor-pointer 
-        prespective-[1300px] will-change-transform transform-3d spotlight-card`}
+        perspective-[1300px] will-change-transform transform-3d spotlight-card`}
       ref={cardRef} 
       variants={cardVariants}
       initial='initial'
@@ -30,7 +30,7 @@ const Spotlight3DCardEffect = ({ children, event, className='rounded-lg p-3' }) 
       viewport='viewport'
     >
       { children }
-      <div className="absolute inset-px -z-2 spotlight-card-content"></div>
+      <div className="absolute inset-px z-[-2] spotlight-card-content"></div>
     </motion.div>
   );
 };

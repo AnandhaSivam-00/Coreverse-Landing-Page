@@ -1,5 +1,3 @@
-import React from 'react';
-
 import SectionPill from '../components/SectionPill';
 import SpotlightContainer from '../components/SpotlightContainer'
 import Spotlight3DCardEffect from '../components/Spotlight3DCardEffect'
@@ -13,15 +11,12 @@ import {
   AcadamicCapIcon,
   VerticalAdjustIcon,
   CheckShieldIcon,
-  LovableServiceIcon,
-  ServicePersonIcon
 } from '../assets/Icons/Icons';
 
 import { motion } from 'framer-motion';
 import {
   headingVariants,
   paragraphVariants,
-  buttonVariants
 } from '../utils/Animations';
 
 const AboutUs = () => {
@@ -36,7 +31,7 @@ const AboutUs = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Welcome to Coreverse Technologies, where creativity, collaboration, and cutting-edge technology converge.
+            Welcome to Coreverse Technologies, we are the architects of digital transformation.
           </motion.h1>
         </div>
         <SpotlightContainer 
@@ -44,15 +39,14 @@ const AboutUs = () => {
         >
           <Spotlight3DCardEffect>
             <p>
-              We're passionate about harnessing the transformative power of creativity and technology in our product-based company.
-              At Coreverse, we firmly believe that innovative design, alongside advanced technologies like SaaS solutions, can simplify
-              communication, enhance experiences, and inspire people globally
+              With a deep-rooted passion for technology and a sharp eye for design, we offer tailor-made IT services that empower 
+              businesses to scale, adapt, and thrive in the modern digital landscape. 
             </p>
           </Spotlight3DCardEffect>
           <Spotlight3DCardEffect>
             <p>
-              Understanding that strong relationships and effective design are founded on collaboration, we're eager to engage in a visual 
-              dialogue with you, understand your unique needs, and leverage our expertise in technology to create exceptional products together.
+              From web solutions to full-fledged SaaS platforms, our strength lies in simplicity-driven 
+              innovation building systems that are intuitive, agile, and built to perform. 
             </p>
           </Spotlight3DCardEffect>
           <Spotlight3DCardEffect>
@@ -64,14 +58,14 @@ const AboutUs = () => {
       </section>
       <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-10 gap-y-8'>
         <div className='flex flex-col justify-start items-start gap-y-5 text-wrap'>
-          <SectionPill sectionTitle={'Our Commitment'} />
+          <SectionPill sectionTitle={'Our Philosophy'} />
           <motion.h2
             variants={headingVariants}
             initial='initial'
             whileInView='whileInView'
             viewport='viewport'
           >
-            Guided by Our Core Principles
+            Guided by "Precision. Purpose. Performance."
           </motion.h2>
           <motion.p
             variants={paragraphVariants}
@@ -79,13 +73,12 @@ const AboutUs = () => {
             whileInView='whileInView'
             viewport='viewport'
           >
-            Our innovative solutions are meticulously crafted to streamline processes, optimize workflows, and drive growth. 
-            With Coreverse, businesses can confidently navigate the ever-evolving landscape of technology, 
-            ensuring seamless operations and sustainable success.
+            We believe every digital product must be rooted in purpose and executed with technical clarity. 
+            From the first wireframe to the final deployment, every step is about delivering functional elegance.
           </motion.p>
           <PrimaryButtonAnimation
             linkText='Join us now'
-            link={'/sign-up'}
+            link={'/contact'}
             animationStyle={'mouse-exit-origin rounded-full'}
           />
         </div>
@@ -129,14 +122,14 @@ const AboutUs = () => {
       </section>
       <section className='grid grid-cols-1 gap-x-5 gap-y-15'>
         <div className='flex flex-col justify-center items-center gap-y-5 sm:gap-y-3 mx-auto text-center text-wrap'>
-          <SectionPill sectionTitle={'Assurance'} />
+          <SectionPill sectionTitle={'Client-Centric Approach'} />
           <motion.h2
             variants={headingVariants}
             initial='initial'
             whileInView='whileInView'
             viewport='viewport'
           >
-            With Coreverse you can
+            With Coreverse you are always in control
           </motion.h2>
         </div>
         <div className='flex flex-row justify-center items-center flex-wrap gap-x-5 gap-y-10'>
@@ -157,60 +150,6 @@ const AboutUs = () => {
               <p className='opacity-75'>{text}</p>
             </motion.div>
           ))}
-        </div>
-      </section>
-      <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-5 gap-y-10'>
-        <div className='flex flex-col justify-center items-center md:items-start lg:items-start gap-y-5 text-wrap'>
-          <SectionPill sectionTitle={'Support'} />
-          <motion.h3
-            variants={headingVariants}
-            initial='initial'
-            whileInView='whileInView'
-            viewport='viewport'
-          >
-            Technical or account support
-          </motion.h3>
-          <motion.p
-            variants={paragraphVariants}
-            initial='initial'
-            whileInView='whileInView'
-            viewport='viewport'
-          >
-            We’re here to help! If you have technical issues,
-          </motion.p>
-        </div>
-        <div className='flex flex-row justify-center items-center gap-y-5 gap-x-5 md:gap-x-10 lg:gap-x-10'>
-          <motion.div
-            initial={{ x: -200, opacity: 0.5 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 3, delay: 0.2 }}
-            viewport='viewport'
-          >
-            <PrimaryButtonAnimation
-              linkText='Contact Now'
-              link={'/Contact-Us'}
-              animationStyle={'mouse-exit-origin rounded-full'}
-            />
-          </motion.div>
-          <motion.div
-            initial={{ scale: 1, opacity: 0.8 }}
-            animate={{ scale: 1.25, opacity: 1 }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: 'reverse' }}
-          >
-            <LovableServiceIcon width={60} height={60} />
-          </motion.div>
-          <motion.div
-            initial={{ x: 200, opacity: 0.5 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 3, delay: 0.2 }}
-            viewport={{ once: false, amount: "some" }}
-          >
-            <PrimaryButtonAnimation
-              linkText={<ServicePersonIcon width={25} height={25} />}
-              link={'/Contact-Us'}
-              animationStyle={'mouse-exit-origin rounded-full'}
-            />
-          </motion.div>
         </div>
       </section>
     </div>

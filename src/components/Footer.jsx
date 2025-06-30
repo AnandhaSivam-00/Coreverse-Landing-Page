@@ -21,7 +21,7 @@ const Footer = () => {
             </svg>
           </h1>
           <p className="mb-4">Our Aid Helps Your Vision To Victory.</p>
-          <p className="text-white mb-1">Tiruchengode</p>
+          <p className="text-white mb-1">India | Global Delivery</p>
           <p className="mb-1">
             <span className="text-white">Call us:</span>{" "}
             <a href="tel:+919944819915" className="text-gray-400 hover:text-blue-500 text-decoration-none">+91 99448 19915</a>
@@ -29,7 +29,7 @@ const Footer = () => {
           <p className="mb-4">
             <span className="text-white">Email:</span>{" "}
             <a href="mailto:contact@coreverse.in" className="text-gray-400 hover:text-blue-500 text-decoration-none">
-              contact@coreverse.in
+              hello@coreversetech.com
             </a>
           </p>
         </div>
