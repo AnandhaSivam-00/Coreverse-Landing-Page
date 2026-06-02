@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import { SwiperSlide } from 'swiper/react'
 
 import SectionPill from '../components/SectionPill'
@@ -8,9 +7,6 @@ import SpotlightContainer from '../components/SpotlightContainer'
 import Spotlight3DCardEffect from '../components/Spotlight3DCardEffect'
 import ReviewCards from '../components/ReviewCards'
 import CardSlider from '../components/CardSlider'
-
-import image from '../assets/662d758488062fffaf190cb8_img5.png'
-import bgImage from '../assets/662fadf359d329ab7374cfea_banner1.png'
 
 import { serviceCardVariants } from '../utils/Animations'
 import { CheckVariantIcon } from '../assets/Icons/Icons'

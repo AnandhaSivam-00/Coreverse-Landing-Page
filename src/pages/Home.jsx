@@ -32,7 +32,7 @@ import {
   headingVariants,
   paragraphVariants,
 } from '../utils/Animations'
-import clientReviewData from '../utils/ClientReviewData'
+import clientReviewData from '../utils/clientReviewData.json'
 
 import '../App.css'
 
