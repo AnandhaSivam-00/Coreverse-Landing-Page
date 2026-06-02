@@ -24,7 +24,6 @@ Check out the website link in the description of the repository
 - [React](https://react.dev/) – JavaScript library for building user interfaces.
 - [Framer Motion](https://www.framer.com/motion/) – Animation library for React.
 - [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS framework for rapid UI development.
-- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) – Popular CSS framework for responsive design.
 
 ## Getting Started
 
@@ -47,9 +46,9 @@ Check out the website link in the description of the repository
 
 3. **Start the development server:**
    ```bash
-   npm start
+   npm run dev
    ```
-   The app will be running at [http://localhost:3000](http://localhost:3000).
+   The app will be running at [http://localhost:5173/](http://localhost:5173/).
 
 ## Project Structure
 
@@ -58,6 +57,7 @@ Check out the website link in the description of the repository
 ├── public/
 ├── src/
 │   ├── components/
+    |    |── 3D Spheres/
 │   ├── assets/
 │   ├── App.jsx
 │   ├── index.js
